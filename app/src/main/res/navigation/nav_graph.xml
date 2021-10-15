@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.umtzngn.cvfragmentsample.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/anasayfaToGiris"
+            app:destination="@id/cvGirisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cvGirisFragment"
+        android:name="com.umtzngn.cvfragmentsample.CvGirisFragment"
+        android:label="fragment_cv_giris"
+        tools:layout="@layout/fragment_cv_giris" >
+        <action
+            android:id="@+id/girisToOzet"
+            app:destination="@id/cvOzetFragment"
+            app:popUpTo="@id/cvGirisFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cvOzetFragment"
+        android:name="com.umtzngn.cvfragmentsample.CvOzetFragment"
+        android:label="fragment_cv_ozet"
+        tools:layout="@layout/fragment_cv_ozet" >
+        <argument
+            android:name="ad"
+            app:argType="string"
+            android:defaultValue="Ad" />
+        <argument
+            android:name="soyad"
+            app:argType="string"
+            android:defaultValue="Soyad" />
+        <argument
+            android:name="yas"
+            app:argType="string"
+            android:defaultValue="Yas" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="Email" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.umtzngn.cvfragmentsample.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+</navigation>

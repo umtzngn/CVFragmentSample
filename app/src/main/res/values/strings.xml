@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CV Fragment Sample</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="soyad">Soyad</string>
+    <string name="ad">Ad</string>
+    <string name="yas">Yaş</string>
+    <string name="email">Email</string>
+    <string name="gonder">Gönder</string>
+    <string name="z_ge_mi">Öz Geçmiş</string>
+    <string name="giri">Giriş</string>
+    <string name="todo">TODO</string>
+</resources>
